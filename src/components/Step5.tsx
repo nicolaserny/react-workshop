@@ -7,6 +7,7 @@ function SearchRaceForm({
 }: {
   onRaceNameChange: (race: string) => void;
 }) {
+  // TODO focus on input
   const submitHandler = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);

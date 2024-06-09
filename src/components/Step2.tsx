@@ -22,6 +22,7 @@ function SearchRaceForm({
   );
 }
 
+// TODO get data from API raceApi.get("r1c7")
 function RaceDetails() {
   return <div>todo</div>;
 }

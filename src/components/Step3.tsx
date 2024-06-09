@@ -23,6 +23,7 @@ function SearchRaceForm({
   );
 }
 
+// TODO use the race name
 function RaceDetails() {
   const [race, setRace] = React.useState<Race | undefined>(undefined);
   const [isloading, setIsLoading] = React.useState(false);
@@ -40,7 +41,7 @@ function RaceDetails() {
   if (isloading) {
     return <div>Loading...</div>;
   }
-
+  // TODO display race data in table (id, name, performance, odds)
   return <pre>{JSON.stringify(race, null, 2)}</pre>;
 }
 

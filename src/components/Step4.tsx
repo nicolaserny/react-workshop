@@ -24,6 +24,7 @@ function SearchRaceForm({
 }
 
 function RaceDetails({ raceName }: { raceName: string }) {
+  // TODO - Create a custom hook called useRace(raceName: string)
   const [race, setRace] = React.useState<Race | undefined>(undefined);
   const [isloading, setIsLoading] = React.useState(false);
 
