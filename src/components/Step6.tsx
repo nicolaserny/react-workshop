@@ -62,20 +62,24 @@ function RaceDetails({ raceName }: { raceName: string }) {
     <StyledSection>
       <h1>{race.title}</h1>
       <StyledTable>
-        <tr>
-          <th>Number</th>
-          <th>Name</th>
-          <th>Performance</th>
-          <th>Odds</th>
-        </tr>
-        {race.horses.map((horse) => (
-          <tr key={horse.id}>
-            <StyledCellWithNumber>{horse.id}</StyledCellWithNumber>
-            <StyledCellWithName>{horse.name}</StyledCellWithName>
-            <StyledPerformance>{horse.performance}</StyledPerformance>
-            <StyledCellWithNumber>{horse.odds}</StyledCellWithNumber>
+        <thead>
+          <tr>
+            <th>Number</th>
+            <th>Name</th>
+            <th>Performance</th>
+            <th>Odds</th>
           </tr>
-        ))}
+        </thead>
+        <tbody>
+          {race.horses.map((horse) => (
+            <tr key={horse.id}>
+              <StyledCellWithNumber>{horse.id}</StyledCellWithNumber>
+              <StyledCellWithName>{horse.name}</StyledCellWithName>
+              <StyledPerformance>{horse.performance}</StyledPerformance>
+              <StyledCellWithNumber>{horse.odds}</StyledCellWithNumber>
+            </tr>
+          ))}
+        </tbody>
       </StyledTable>
     </StyledSection>
   );

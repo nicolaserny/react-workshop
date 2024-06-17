@@ -48,6 +48,7 @@ function RaceDetails() {
 export function Step3() {
   const [raceName, setRaceName] = React.useState("");
 
+  // TODO do not display RaceDetails when there is no raceName
   return (
     <main>
       <SearchRaceForm onRaceNameChange={setRaceName} />

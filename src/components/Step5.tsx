@@ -56,20 +56,24 @@ function RaceDetails({ raceName }: { raceName: string }) {
     <section>
       <h1>{race.title}</h1>
       <table>
-        <tr>
-          <th>Number</th>
-          <th>Name</th>
-          <th>Performance</th>
-          <th>Odds</th>
-        </tr>
-        {race.horses.map((horse) => (
-          <tr key={horse.id}>
-            <td>{horse.id}</td>
-            <td>{horse.name}</td>
-            <td>{horse.performance}</td>
-            <td>{horse.odds}</td>
+        <thead>
+          <tr>
+            <th>Number</th>
+            <th>Name</th>
+            <th>Performance</th>
+            <th>Odds</th>
           </tr>
-        ))}
+        </thead>
+        <tbdoy>
+          {race.horses.map((horse) => (
+            <tr key={horse.id}>
+              <td>{horse.id}</td>
+              <td>{horse.name}</td>
+              <td>{horse.performance}</td>
+              <td>{horse.odds}</td>
+            </tr>
+          ))}
+        </tbdoy>
       </table>
     </section>
   );
