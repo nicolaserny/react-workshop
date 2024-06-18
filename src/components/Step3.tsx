@@ -41,8 +41,25 @@ function RaceDetails() {
   if (isloading) {
     return <div>Loading...</div>;
   }
+  // TODO display message if there is no data
+
   // TODO display race data in table (id, name, performance, odds)
-  return <pre>{JSON.stringify(race, null, 2)}</pre>;
+  return (
+    <section>
+      <h1>{race.title}</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Number</th>
+            <th>Name</th>
+            <th>Performance</th>
+            <th>Odds</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  );
 }
 
 export function Step3() {
